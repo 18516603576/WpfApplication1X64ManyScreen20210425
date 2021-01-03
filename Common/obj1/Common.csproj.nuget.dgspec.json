@@ -1,0 +1,66 @@
+{
+  "format": 1,
+  "restore": {
+    "H:\\VS2012\\project\\Showbox4\\WpfApplication1\\Common\\Common.csproj": {}
+  },
+  "projects": {
+    "H:\\VS2012\\project\\Showbox4\\WpfApplication1\\Common\\Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "H:\\VS2012\\project\\Showbox4\\WpfApplication1\\Common\\Common.csproj",
+        "projectName": "Common",
+        "projectPath": "H:\\VS2012\\project\\Showbox4\\WpfApplication1\\Common\\Common.csproj",
+        "packagesPath": "C:\\Users\\jiangshanmn\\.nuget\\packages\\",
+        "outputPath": "H:\\VS2012\\project\\Showbox4\\WpfApplication1\\Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\jiangshanmn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "H:\\VS2012\\project\\Showbox4\\WpfApplication1\\Model\\Model.csproj": {
+                "projectPath": "H:\\VS2012\\project\\Showbox4\\WpfApplication1\\Model\\Model.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "H:\\VS2012\\project\\Showbox4\\WpfApplication1\\Model\\Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "H:\\VS2012\\project\\Showbox4\\WpfApplication1\\Model\\Model.csproj",
+        "projectName": "Model",
+        "projectPath": "H:\\VS2012\\project\\Showbox4\\WpfApplication1\\Model\\Model.csproj"
+      },
+      "frameworks": {
+        "net452": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+﻿<Window x:Class="WpfApplication1.ManageWin.EditTurnPictureLinkToWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="链接到" Height="600" Width="900">
+    <Grid x:Name="mainGrid">
+        <!--<Label Content="链接到指定页面：" HorizontalAlignment="Left" Margin="136,102,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.226,3.044" Height="29" Width="109"/>
+        <ComboBox Name="linkToPageId" Text="请选择" HorizontalAlignment="Left" Margin="136,145,0,0" VerticalAlignment="Top" Height="30"  VerticalContentAlignment="Center" MinWidth="200" RenderTransformOrigin="0.482,0.432"/>
+        <Button Name="Submit_Button" Content="保存" HorizontalAlignment="Left" Margin="595,397,0,0" VerticalAlignment="Top" Width="114" Height="38" Click="Submit_Button_Click"/>
+        <Button Name="image" Content="" HorizontalAlignment="Left" Margin="531,79,0,0" VerticalAlignment="Top" Width="200" Height="200"/>
+        <CheckBox Content="弹窗显示页面" x:Name="isDialogLink" HorizontalAlignment="Left" Margin="136,307,0,0" VerticalAlignment="Top" ToolTip="以弹窗形式显示页面" />
+
+        <Label Content="显示位置：" ToolTip="显示到哪个窗口"  HorizontalAlignment="Left" Margin="136,201,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.226,3.044" Height="29" Width="109">
+
+        </Label>
+        <ComboBox Name="showInWhichCFrame" Text="请选择" HorizontalAlignment="Left" Margin="136,235,0,0" VerticalAlignment="Top" Height="30"  VerticalContentAlignment="Center" MinWidth="200"/>
+        <CheckBox Content="透明弹窗" x:Name="isTransparentDialog" HorizontalAlignment="Left" Margin="270,307,0,0" VerticalAlignment="Top" ToolTip="弹窗背景设为透明的" />
+        <CheckBox Content="查看大图" x:Name="isClickShow" HorizontalAlignment="Left" Margin="136,373,0,0" VerticalAlignment="Top" ToolTip="点击查看大图" />-->
+        <Button Name="Submit_Button" Content="保存" HorizontalAlignment="Left" Margin="742,513,0,0" VerticalAlignment="Top" Width="114" Height="38" />
+    </Grid>
+</Window>

@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfApplication1.MenuWin.HowExitWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="如何退出软件" Height="500" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+
+        <Canvas HorizontalAlignment="Center" Height="300"  VerticalAlignment="Center" Width="500">
+
+            <Label Content="方式一、Alt+F4（有键盘）" Canvas.Top="35" Background="{x:Null}" Foreground="#FF080808" Canvas.Left="27"/>
+            <Label Content="方式二、屏幕左上角双击，输入密码（触摸屏）" Canvas.Top="90" Background="{x:Null}" Foreground="#FF080808" Canvas.Left="27"/>
+            <Label Content="密码" Canvas.Left="54" Canvas.Top="141" RenderTransformOrigin="0.14,0.771"/>
+            <TextBox x:Name="password" Height="30" Canvas.Left="111" VerticalContentAlignment="Center" Padding="5" TextWrapping="Wrap" Text="" Canvas.Top="136" Width="130" RenderTransformOrigin="0.475,0.493"/>
+            <Label Content="注：如果密码为空，方式二将被禁用" Canvas.Top="184" Background="{x:Null}" Foreground="#FFB0A9A9" Canvas.Left="63"/>
+
+
+        </Canvas>
+        <Button x:Name="Submit_Button"  Content="保存" HorizontalAlignment="Left" Margin="650,15,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Height="30"  Click="Submit_Button_Click"/>
+    </Grid>
+</Window>

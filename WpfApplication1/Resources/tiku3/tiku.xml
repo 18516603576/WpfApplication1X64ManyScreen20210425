@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+<xuanzetiku tijiaourl="/com.flame.cms/preview/game/insert" apiurl="http://wenlongdiping.com/flash/lianzheng/">
+	<timu>
+		<pic yes="0">pic3/1/李绿园.png</pic>
+		<pic yes="0">pic3/1/张汤.png</pic>
+		<pic yes="1">pic3/1/韩非子.png</pic>
+		<pic yes="0">pic3/1/诸葛亮.png</pic>
+		<wenzi yes="0"><![CDATA[法律是正义与善良之术]]></wenzi>
+		<wenzi yes="0"><![CDATA[法律旨在防止强势者为所欲为]]></wenzi>
+		<wenzi yes="0"><![CDATA[犯罪总是以惩罚相补偿;只有惩罚才能使犯罪得到偿还]]></wenzi>
+		<wenzi yes="1"><![CDATA[法不阿贵(法律不偏袒有权有势的人)]]></wenzi>
+	</timu>
+	
+	<timu>
+		<pic yes="0">pic3/2/包拯.png</pic>
+		<pic yes="1">pic3/2/宋慈.png</pic>
+		<pic yes="0">pic3/2/萧何.png</pic>
+		<pic yes="0">pic3/2/海瑞.png</pic>
+		<wenzi yes="1"><![CDATA[狱事莫重于大辟，大辟莫重于初情，初情莫重于检验]]></wenzi>
+		<wenzi yes="0"><![CDATA[审判不应依照先例，而应依照法律]]></wenzi>
+		<wenzi yes="0"><![CDATA[让法官来回答法律问题，而把事实问题留给陪审员去裁断]]></wenzi>
+		<wenzi yes="0"><![CDATA[造法易，执行难]]></wenzi>
+	</timu>
+	
+	<timu>
+		<pic yes="0">pic3/3/柏拉图.png</pic>
+		<pic yes="0">pic3/3/黑格尔.png</pic>
+		<pic yes="1">pic3/3/孟德斯鸠.png</pic>
+		<pic yes="0">pic3/3/亚里士多德.png</pic>
+		<wenzi yes="0"><![CDATA[没有法律就没有犯罪，没有法律就没有刑罚。法无明文规定不为罪]]></wenzi>
+		<wenzi yes="1"><![CDATA[自由不是无限制的自由，自由是一种能做法律许可的任何事的权力]]></wenzi>
+		<wenzi yes="0"><![CDATA[犯罪总是以惩罚相补偿;只有惩罚才能使犯罪得到偿还]]></wenzi>
+		<wenzi yes="0"><![CDATA[法律旨在防止强势者为所欲为]]></wenzi>
+	</timu>
+</xuanzetiku>
+</root>
+
+
+

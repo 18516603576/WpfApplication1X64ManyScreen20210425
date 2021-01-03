@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfApplication1.ManageWin.EditWordAttrWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="编辑Word文章属性" Height="500" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Name="Row0" Height="*"/>
+            <RowDefinition Name="Row1" Height="60" />
+        </Grid.RowDefinitions>
+        <Canvas Grid.Row="0" Margin="0,-22,0,22">
+            <Label Content="文件地址" Canvas.Left="53" Canvas.Top="48"/>
+            <Label Name="url" Height="30" VerticalContentAlignment="Center" Canvas.Left="154"   Canvas.Top="48"  />
+            <Label Content="宽度" Canvas.Left="77" Canvas.Top="105"/>
+            <TextBox x:Name="width" Height="30" VerticalContentAlignment="Center" Canvas.Left="154" TextWrapping="Wrap" Text="TextBox" Canvas.Top="105" Width="122"/>
+            <Label Content="高度" Canvas.Left="451" Canvas.Top="105" RenderTransformOrigin="0.174,0.611"/>
+            <TextBox x:Name="height" Height="30" VerticalContentAlignment="Center" Canvas.Left="496" TextWrapping="Wrap" Text="TextBox" Canvas.Top="105" Width="122"/>
+
+            <Label Content="左边距" Canvas.Left="65" Canvas.Top="165"/>
+            <TextBox x:Name="left" Height="30" VerticalContentAlignment="Center" Canvas.Left="154" TextWrapping="Wrap" Text="TextBox" Canvas.Top="160" Width="122"/>
+            <Label Content="上边距" Canvas.Left="439" Canvas.Top="173" RenderTransformOrigin="0.174,0.611"/>
+            <TextBox x:Name="top" Height="30" VerticalContentAlignment="Center" Canvas.Left="496" TextWrapping="Wrap" Text="TextBox" Canvas.Top="169" Width="122"/>
+            <Label Content="透明度" Canvas.Left="65" Canvas.Top="225"/>
+            <TextBox x:Name="opacity" Height="30" VerticalContentAlignment="Center" Canvas.Left="154" TextWrapping="Wrap" Text="" Canvas.Top="220" Width="122"/>
+            <Label Content="注：请填写0-100的整数" Canvas.Left="154" Canvas.Top="250" Width="155" Foreground="#FF838282"/>
+            <Label Content="层顺序" Canvas.Left="63" Canvas.Top="307"/>
+            <Label x:Name="idx" Content="" Canvas.Left="154" Canvas.Top="307" Width="136" Foreground="#FFA4A4A4"/>
+
+        </Canvas>
+
+
+        <Button Grid.Row="1" Name="Submit_Button" Content="保存" HorizontalAlignment="Right" Margin="15,15,15,0"  VerticalAlignment="Top" Width="100" Height="30" Click="Submit_Button_Click"/>
+    </Grid>
+</Window>

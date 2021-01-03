@@ -1,0 +1,18 @@
+﻿<Window x:Class="WpfApplication1.MenuWin.AutoBackToHomeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="自动回到首页" Height="500" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+
+        <Canvas HorizontalAlignment="Center" Height="300"  VerticalAlignment="Center" Width="500">
+            <Label Content="无操作时间（秒）" Canvas.Left="10" Canvas.Top="44"/>
+            <TextBox x:Name="noActionTimeBackToHome" Height="30" VerticalContentAlignment="Center" Canvas.Left="121" TextWrapping="Wrap" Text="" Canvas.Top="39" Width="120"  Padding="5"/>
+            <Label Content="注：软件多少秒没有操作自动返回首页&#xD;&#xA;0，则不启用此功能" Canvas.Top="80" Background="{x:Null}" Foreground="#FFD8CDCD" Canvas.Left="22"/>
+        </Canvas>
+        <Button x:Name="Submit_Button"  Content="保存" HorizontalAlignment="Left" Margin="650,15,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Height="30"  Click="Submit_Button_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,18 @@
+﻿<Window x:Class="WpfApplication1.ManageWin.EditBackgroundImageWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="设置页面背景" Height="500" Width="800">
+    <Grid>
+        <Button Name="Submit_Button" Content="保存" HorizontalAlignment="Left" Margin="619,402,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Submit_Button_Click"/>
+        <!--<WrapPanel Name="imgList" HorizontalAlignment="Left" Height="324" Margin="108,36,0,0" VerticalAlignment="Top" Width="576"/>-->
+
+        <Canvas x:Name="imgCanvas" Width="576" Height="324" HorizontalAlignment="Left" Margin="108,36,0,0" VerticalAlignment="Top">
+            <Button x:Name="backgroundImageId" Width="576" Height="324"></Button>
+            <Canvas x:Name="rowCanvas" Background="Black" Opacity="0.6" Width="576" Height="24" Canvas.Left="0" Canvas.Bottom="0">
+                <Button x:Name="removeBtn" Width="20" Height="20" BorderThickness="0" Canvas.Top="2" Canvas.Left="278"></Button>
+            </Canvas> 
+        </Canvas>
+        <Label Name="url" Content="点击上传背景图片" HorizontalAlignment="Left" Margin="108,375,0,0" VerticalAlignment="Top" Foreground="#FFB8B0B0"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,166 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  
+    <!--1.窗口关闭按钮-->
+    <Style x:Key="WinCloseButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate   TargetType="{x:Type Button}">
+                    <Border x:Name="Bd"  BorderThickness="0" Background="{TemplateBinding Background}"> 
+                    </Border> 
+                    <ControlTemplate.Triggers> 
+                        <Trigger  Property="IsEnabled" Value="True"> 
+                            
+                        </Trigger> 
+                        <Trigger Property="IsMouseOver"  Value="True">
+                            <Setter TargetName="Bd" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="../Resources/ico_win_close_active.png" Stretch="Fill"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                         
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter> 
+    </Style>
+
+    <!--2.预览窗口关闭按钮-->
+    <Style x:Key="PreviewWinCloseButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate   TargetType="{x:Type Button}">
+                    <Border x:Name="Bd"  BorderThickness="0" Background="{TemplateBinding Background}">
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger  Property="IsEnabled" Value="True">
+
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"  Value="True">
+                            <Setter TargetName="Bd" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="../Resources/ico_preview_win_close_active.png" Stretch="Fill"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--3.窗口最小化按钮-->
+    <Style x:Key="WinMinButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate   TargetType="{x:Type Button}">
+                    <Border x:Name="Bd"  BorderThickness="0" Background="{TemplateBinding Background}">
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger  Property="IsEnabled" Value="True">
+
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"  Value="True">
+                            <Setter TargetName="Bd" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="../Resources/ico_win_min_active.png" Stretch="Fill"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <!--1.默认按钮样式 -->
+    <Style x:Key="DefaultButtonStyle" TargetType="Button" > 
+        <Setter Property="Template">
+            <Setter.Value> 
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"  Background="{TemplateBinding Background}">
+                        <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="False" >
+
+                        </Trigger>
+                        <Trigger Property="IsDefault" Value="True">
+                             
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="False"/>
+                        <Trigger Property="IsEnabled" Value="False">
+                            
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--2.切换图片按钮样式-->
+    <Style x:Key="TurnPicturePageButtonStyle" TargetType="Button" >
+        <!--<Setter Property="Background" Value="#ff0000"/>-->
+        <Setter Property="Template">
+            <Setter.Value>
+
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" CornerRadius="7,7,7,7" Background="#FF363636">
+                        <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="False" >
+
+                        </Trigger>
+                        <Trigger Property="IsDefault" Value="True">
+                            <Setter Property="Border.Background" TargetName="Bd"  Value="#FF36EC19"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <!--<Setter Property="Border.Background" TargetName="Bd"  Value="#FF292828"/>-->
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="False"/>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Border.Background" TargetName="Bd"  Value="#FF36EC19"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--3.设计模式鼠标移入-->
+    <Style x:Key="ImageButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate   TargetType="{x:Type Button}">
+                    <Border x:Name="Bd"  BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}">
+                        <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger  Property="IsEnabled" Value="True">
+
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"  Value="True">
+                            <Setter Property="BorderThickness" TargetName="Bd"   Value="1"/>
+                            <Setter Property="BorderBrush" TargetName="Bd"   Value="#FF109CEC"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <!--默认Button-->
+    <Style TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}"/> 
+</ResourceDictionary>

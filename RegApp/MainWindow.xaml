@@ -1,0 +1,18 @@
+﻿<Window x:Class="RegApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RegApp"
+        mc:Ignorable="d"
+        Title="注册机" Height="600" Width="1000">
+    <Grid>
+        <TextBlock Text="机器码" FontSize="18" VerticalAlignment="Center" RenderTransformOrigin="0.136,-1.266" Margin="153,105,750,441"/>
+        <TextBox x:Name="machineCodeText" TextWrapping="Wrap" AcceptsReturn="True" FontSize="16" VerticalContentAlignment="Center" Margin="259,88,271,433"/>
+
+        <TextBlock Text="注册码" FontSize="18" VerticalAlignment="Center" Margin="154,223,754,323"/>
+        <TextBox x:Name="regCodeText" TextWrapping="Wrap" AcceptsReturn="True"  FontSize="16"    VerticalContentAlignment="Center" Margin="259,212,271,311"/>
+        <Button Content="生成注册码" HorizontalAlignment="Left" Margin="272,320,0,0" VerticalAlignment="Top" Width="120" Height="40"  Click="Submit_Button_Click" FontSize="16"/>
+
+    </Grid>
+</Window>

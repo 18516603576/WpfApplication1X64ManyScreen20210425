@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfApplication1.PageWin.PageAttrWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1.PageWin"
+        mc:Ignorable="d"
+        Title="属性" Height="500" Width="800">
+    <Grid>
+
+        <Label Content="页面名称" HorizontalAlignment="Left" Margin="216,87,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.588,-1.164"/>
+        <TextBox Name="pagename" HorizontalAlignment="Left" VerticalContentAlignment="Center" Padding="5" Height="30" Margin="292,82,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="285"/>
+
+        <Label Content="页面切换方式" HorizontalAlignment="Left" Margin="192,243,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.588,-1.164"/>
+        <ComboBox x:Name="pageSwitchType" HorizontalAlignment="Left" Margin="291,243,0,0" VerticalAlignment="Top" Width="205" Height="30" Padding="8" />
+
+
+
+        <Label Content="页面宽度" HorizontalAlignment="Left" Margin="216,142,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.588,-1.164"/>
+        <TextBox Name="width" HorizontalAlignment="Left" VerticalContentAlignment="Center" Padding="5" Height="30" Margin="292,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="91"/>
+
+        <Label Content="页面高度" HorizontalAlignment="Left" Margin="409,145,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.588,-1.164"/>
+        <TextBox Name="height" HorizontalAlignment="Left" VerticalContentAlignment="Center" Padding="5" Height="30" Margin="484,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92"/>
+        <Label Content="注：页面宽度高度为0，则显示默认大小" Canvas.Left="496"  Margin="292,187,199.6,243.4"  Foreground="#FF838282"/>
+
+
+
+        <Button Content="保存" HorizontalAlignment="Left" Margin="658,412,0,0" VerticalAlignment="Top" Width="96" Click="Button_Click" Height="30" RenderTransformOrigin="4.213,7.415"/>
+
+    </Grid>
+</Window>

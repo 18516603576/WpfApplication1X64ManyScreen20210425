@@ -1,0 +1,32 @@
+﻿<Application x:Class="WpfApplication1.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             StartupUri="MainWindow.xaml"> 
+    <Application.Resources> 
+        <ResourceDictionary>  
+            <ResourceDictionary.MergedDictionaries>
+                
+                <ResourceDictionary Source="style/ListBoxStyle.xaml"/>
+                <ResourceDictionary Source="style/ListBoxItemStyle.xaml"/>
+                <ResourceDictionary Source="style/button.xaml"/>
+                <ResourceDictionary Source="style/Menu.xaml"/>  
+                <ResourceDictionary Source="style/ScrollBar.xaml"/>  
+                <ResourceDictionary Source="style/DocumentViewerStyle.xaml"/> 
+
+                <!--<ResourceDictionary Source="style/CWordStyle.xaml"/>-->
+                <ResourceDictionary Source="style/CVideoStyle.xaml"/>
+                <ResourceDictionary Source="style/TurnPictureStyle.xaml"/>
+                <ResourceDictionary Source="style/MarqueStyle.xaml"/>
+                <ResourceDictionary Source="style/MarqueLayerStyle.xaml"/> 
+                <ResourceDictionary Source="style/CFrameStyle.xaml"/>  
+                <ResourceDictionary Source="style/LabelStyle.xaml"/>
+                <ResourceDictionary Source="style/TextBoxStyle.xaml"/>
+                <ResourceDictionary Source="style/GifStyle.xaml"/>
+                <ResourceDictionary Source="style/CCalendarStyle.xaml"/>
+                <ResourceDictionary Source="style/DataGridStyle.xaml"/>
+
+            </ResourceDictionary.MergedDictionaries>
+            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

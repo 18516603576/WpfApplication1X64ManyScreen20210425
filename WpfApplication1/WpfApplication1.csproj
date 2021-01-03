@@ -1,0 +1,1024 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\CefSharp.WinForms.63.0.3\build\CefSharp.WinForms.props" Condition="Exists('..\packages\CefSharp.WinForms.63.0.3\build\CefSharp.WinForms.props')" />
+  <Import Project="..\packages\CefSharp.Common.63.0.3\build\CefSharp.Common.props" Condition="Exists('..\packages\CefSharp.Common.63.0.3\build\CefSharp.Common.props')" />
+  <Import Project="..\packages\cef.redist.x86.3.3239.1723\build\cef.redist.x86.props" Condition="Exists('..\packages\cef.redist.x86.3.3239.1723\build\cef.redist.x86.props')" />
+  <Import Project="..\packages\cef.redist.x64.3.3239.1723\build\cef.redist.x64.props" Condition="Exists('..\packages\cef.redist.x64.3.3239.1723\build\cef.redist.x64.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40F9A335-3C49-44FE-B3A7-B080AE0D0605}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WpfApplication1</RootNamespace>
+    <AssemblyName>WpfApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ShowBox.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Lierda.WPFHelper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cbb49eab16984ff2, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lierda.WPFHelper.1.0.3\lib\net452\Lierda.WPFHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Expression.Interaction.3.0.40218.0\lib\net45\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="MyLoadingLib">
+      <HintPath>..\packages\MyLoading\MyLoadingLib.dll</HintPath>
+    </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.109.2\lib\net451\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.109.0\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.109.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Expression.Interaction.3.0.40218.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Vlc.DotNet.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vlc.DotNet.Core.3.1.0\lib\net45\Vlc.DotNet.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Vlc.DotNet.Core.Interops, Version=3.1.0.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vlc.DotNet.Core.Interops.3.1.0\lib\net45\Vlc.DotNet.Core.Interops.dll</HintPath>
+    </Reference>
+    <Reference Include="Vlc.DotNet.Wpf, Version=3.1.0.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vlc.DotNet.Wpf.3.1.0\lib\net45\Vlc.DotNet.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WpfAnimatedGif, Version=2.0.0.0, Culture=neutral, PublicKeyToken=9e7cd3b544a090dc, processorArchitecture=MSIL">
+      <HintPath>..\packages\WpfAnimatedGif.2.0.0\lib\net40\WpfAnimatedGif.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="control\CFrame.xaml.cs">
+      <DependentUpon>CFrame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EventWindow.xaml.cs">
+      <DependentUpon>EventWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FolderWin\DeleteFileWindow.xaml.cs">
+      <DependentUpon>DeleteFileWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FolderWin\StorageFileDeleteFolderWindow.xaml.cs">
+      <DependentUpon>StorageFileDeleteFolderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FolderWin\StorageFileMoveToFolderWindow.xaml.cs">
+      <DependentUpon>StorageFileMoveToFolderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FolderWin\StorageFileNewFolderWindow.xaml.cs">
+      <DependentUpon>StorageFileNewFolderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FolderWin\StorageFileRenameFolderWindow.xaml.cs">
+      <DependentUpon>StorageFileRenameFolderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FolderWin\StorageImageDeleteFolderWindow.xaml.cs">
+      <DependentUpon>StorageImageDeleteFolderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FolderWin\StorageImageMoveToFolderWindow.xaml.cs">
+      <DependentUpon>StorageImageMoveToFolderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FolderWin\StorageImageNewFolderWindow.xaml.cs">
+      <DependentUpon>StorageImageNewFolderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FolderWin\StorageImageRenameFolderWindow.xaml.cs">
+      <DependentUpon>StorageImageRenameFolderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FolderWin\StorageVideoDeleteFolderWindow.xaml.cs">
+      <DependentUpon>StorageVideoDeleteFolderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FolderWin\DeleteImageWindow.xaml.cs">
+      <DependentUpon>DeleteImageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FolderWin\DeleteVideoWindow.xaml.cs">
+      <DependentUpon>DeleteVideoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FolderWin\StorageVideoNewFolderWindow.xaml.cs">
+      <DependentUpon>StorageVideoNewFolderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FolderWin\StorageVideoRenameFolderWindow.xaml.cs">
+      <DependentUpon>StorageVideoRenameFolderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FolderWin\StorageVideoMoveToFolderWindow.xaml.cs">
+      <DependentUpon>StorageVideoMoveToFolderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditCfgWeekWindow.xaml.cs">
+      <DependentUpon>EditCfgWeekWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditCVideoBackgroundWindow.xaml.cs">
+      <DependentUpon>EditCVideoBackgroundWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditCFrameAttrWindow.xaml.cs">
+      <DependentUpon>EditCFrameAttrWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditCFrameWindow.xaml.cs">
+      <DependentUpon>EditCFrameWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditFrameDialogToWindow.xaml.cs">
+      <DependentUpon>EditFrameDialogToWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditGifWindow.xaml.cs">
+      <DependentUpon>EditGifWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditGifAttrWindow.xaml.cs">
+      <DependentUpon>EditGifAttrWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditBackgroundImageSelectorWindow.xaml.cs">
+      <DependentUpon>EditBackgroundImageSelectorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditCCalendarWindow.xaml.cs">
+      <DependentUpon>EditCCalendarWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditCCalendarAttrWindow.xaml.cs">
+      <DependentUpon>EditCCalendarAttrWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditTextBlockWindow.xaml.cs">
+      <DependentUpon>EditTextBlockWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditMarqueLayerAttrWindow.xaml.cs">
+      <DependentUpon>EditMarqueLayerAttrWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditMarqueAttrWindow.xaml.cs">
+      <DependentUpon>EditMarqueAttrWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditMarqueLayerWindow.xaml.cs">
+      <DependentUpon>EditMarqueLayerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditTurnPictureLinkToWindow.xaml.cs">
+      <DependentUpon>EditTurnPictureLinkToWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditMarqueWindow.xaml.cs">
+      <DependentUpon>EditMarqueWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditTextBlockAttrWindow.xaml.cs">
+      <DependentUpon>EditTextBlockAttrWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditCVideoBackgroundSelectorWindow.xaml.cs">
+      <DependentUpon>EditCVideoBackgroundSelectorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditCAudioWindow.xaml.cs">
+      <DependentUpon>EditCAudioWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditCAudioAttrWindow.xaml.cs">
+      <DependentUpon>EditCAudioAttrWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\FileItemPage.xaml.cs">
+      <DependentUpon>FileItemPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\ImageItemPage.xaml.cs">
+      <DependentUpon>ImageItemPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditImageAnimationWindow.xaml.cs">
+      <DependentUpon>EditImageAnimationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\InsertFrameWindow.xaml.cs">
+      <DependentUpon>InsertFrameWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\OpenSelectAnimationWindow.xaml.cs">
+      <DependentUpon>OpenSelectAnimationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\StorageManagerWindow.xaml.cs">
+      <DependentUpon>StorageManagerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\VideoItemPage.xaml.cs">
+      <DependentUpon>VideoItemPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="manage\ControlRightClick.cs" />
+    <Compile Include="manage\ControlRightClickCommon.cs" />
+    <Compile Include="manage\RightContextMenu.cs" />
+    <Compile Include="manage\PageRightClick.cs" />
+    <Compile Include="MenuWin\AutoBackToHomeWindow.xaml.cs">
+      <DependentUpon>AutoBackToHomeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuWin\PageSwitchTypeWindow.xaml.cs">
+      <DependentUpon>PageSwitchTypeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuWin\SoftRegWindow.xaml.cs">
+      <DependentUpon>SoftRegWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageWin\DeletePageWindow.xaml.cs">
+      <DependentUpon>DeletePageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditBackButtonAttrWindow.xaml.cs">
+      <DependentUpon>EditBackButtonAttrWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditBackgroundImageWindow.xaml.cs">
+      <DependentUpon>EditBackgroundImageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditHomeButtonAttrWindow.xaml.cs">
+      <DependentUpon>EditHomeButtonAttrWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditImageAttrWindow.xaml.cs">
+      <DependentUpon>EditImageAttrWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditLinkToWebWindow.xaml.cs">
+      <DependentUpon>EditLinkToWebWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditLinkToWindow.xaml.cs">
+      <DependentUpon>EditLinkToWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditOpenVideoWindow.xaml.cs">
+      <DependentUpon>EditOpenVideoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditTurnPictureAttrWindow.xaml.cs">
+      <DependentUpon>EditTurnPictureAttrWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditVideoAttrWindow.xaml.cs">
+      <DependentUpon>EditVideoAttrWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditWordAttrWindow.xaml.cs">
+      <DependentUpon>EditWordAttrWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Editing.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditImageWindow.xaml.cs">
+      <DependentUpon>EditImageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditTurnPictureWindow.xaml.cs">
+      <DependentUpon>EditTurnPictureWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditVideoWindow.xaml.cs">
+      <DependentUpon>EditVideoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWin\EditWordWindow.xaml.cs">
+      <DependentUpon>EditWordWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="manage\InsertToPage.cs" />
+    <Compile Include="MenuWin\AboutUsWindow.xaml.cs">
+      <DependentUpon>AboutUsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuWin\BaseConfigWindow.xaml.cs">
+      <DependentUpon>BaseConfigWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuWin\EditBackgroundMusicWindow.xaml.cs">
+      <DependentUpon>EditBackgroundMusicWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuWin\HowExitWindow.xaml.cs">
+      <DependentUpon>HowExitWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuWin\OperationDocumentWindow.xaml.cs">
+      <DependentUpon>OperationDocumentWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageWin\DeleteMoreScreenWindow.xaml.cs">
+      <DependentUpon>DeleteMoreScreenWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageWin\InsertMoreScreenWindow.xaml.cs">
+      <DependentUpon>InsertMoreScreenWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageWin\EditMoreScreenWindow.xaml.cs">
+      <DependentUpon>EditMoreScreenWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageWin\NewAfterPageWindow.xaml.cs">
+      <DependentUpon>NewAfterPageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageWin\NewPageByMenuWindow.xaml.cs">
+      <DependentUpon>NewPageByMenuWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageWin\MoreScreenWindow.xaml.cs">
+      <DependentUpon>MoreScreenWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageWin\NewPageWindow.xaml.cs">
+      <DependentUpon>NewPageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageTemplate.xaml.cs">
+      <DependentUpon>PageTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="manage\PageTree.cs" />
+    <Compile Include="PageWin\PageAttrWindow.xaml.cs">
+      <DependentUpon>PageAttrWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageWin\RenameWindow.xaml.cs">
+      <DependentUpon>RenameWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TabWindow.xaml.cs">
+      <DependentUpon>TabWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="control\CFrame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EventWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FolderWin\DeleteFileWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FolderWin\StorageFileDeleteFolderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FolderWin\StorageFileMoveToFolderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FolderWin\StorageFileNewFolderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FolderWin\StorageFileRenameFolderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FolderWin\StorageImageDeleteFolderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FolderWin\StorageImageMoveToFolderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FolderWin\StorageImageNewFolderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FolderWin\StorageImageRenameFolderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FolderWin\StorageVideoDeleteFolderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FolderWin\DeleteImageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FolderWin\DeleteVideoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FolderWin\StorageVideoNewFolderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FolderWin\StorageVideoRenameFolderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FolderWin\StorageVideoMoveToFolderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageWin\EditCfgWeekWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageWin\EditCVideoBackgroundWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ManageWin\EditCFrameAttrWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageWin\EditCFrameWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageWin\EditFrameDialogToWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ManageWin\EditGifWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ManageWin\EditGifAttrWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ManageWin\EditBackgroundImageSelectorWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ManageWin\EditCCalendarWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ManageWin\EditCCalendarAttrWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ManageWin\EditTextBlockWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ManageWin\EditMarqueLayerAttrWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ManageWin\EditMarqueAttrWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ManageWin\EditMarqueLayerWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ManageWin\EditTurnPictureLinkToWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ManageWin\EditMarqueWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ManageWin\EditTextBlockAttrWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ManageWin\EditCVideoBackgroundSelectorWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ManageWin\EditCAudioWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ManageWin\EditCAudioAttrWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ManageWin\FileItemPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageWin\ImageItemPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageWin\EditImageAnimationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageWin\InsertFrameWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageWin\OpenSelectAnimationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageWin\StorageManagerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageWin\VideoItemPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MenuWin\AutoBackToHomeWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MenuWin\PageSwitchTypeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MenuWin\SoftRegWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageWin\DeletePageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageWin\EditBackButtonAttrWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageWin\EditBackgroundImageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageWin\EditHomeButtonAttrWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageWin\EditImageAttrWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageWin\EditImageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageWin\EditLinkToWebWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageWin\EditLinkToWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageWin\EditOpenVideoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageWin\EditTurnPictureAttrWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageWin\EditVideoAttrWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageWin\EditTurnPictureWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageWin\EditVideoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageWin\EditWordAttrWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageWin\EditWordWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MenuWin\AboutUsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MenuWin\BaseConfigWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MenuWin\EditBackgroundMusicWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MenuWin\HowExitWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MenuWin\OperationDocumentWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageWin\DeleteMoreScreenWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PageWin\InsertMoreScreenWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PageWin\EditMoreScreenWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PageWin\NewAfterPageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageWin\NewPageByMenuWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageWin\MoreScreenWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PageWin\NewPageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageWin\PageAttrWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageWin\RenameWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="style\CAudioStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="style\CCalendarStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="style\DataGridStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="style\GifStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="style\CVideoStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="style\TextBoxStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="style\LabelStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="style\CWordStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="style\DocumentViewerStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="style\MarqueLayerStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="style\Menu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="style\button.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="style\ListBoxItemStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="style\ListBoxStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="style\ScrollBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="style\CFrameStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="style\MarqueStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="style\TurnPictureStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TabWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bll\Bll.csproj">
+      <Project>{dc0d6ba5-f663-4d9d-ab72-548935abe5d1}</Project>
+      <Name>Bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{ca3e7ec2-1ae4-4909-820d-2aaf78be9582}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{2b28cba9-1539-4d66-a31d-121192dea4d4}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShowBox\ShowBox.csproj">
+      <Project>{ef6e018d-6a60-4b2d-b08f-1d88285f3b2f}</Project>
+      <Name>ShowBox</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\1.swf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ico-add-image.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="ShowBox.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ico-add-video.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ico_media_select.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ico_media_select_active.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ico_music_button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ico_preview_win_close.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ico_preview_win_close_active.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ico_reg_scuccess.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ico_remove.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ico_win_min.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ico_win_min_active.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ico_win_close.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ico_win_close_active.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ShowBox.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\storage\ico_fileItem.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\storage\ico_fileItem_active.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\storage\ico_imageItem.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\storage\ico_imageItem_active.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\storage\ico_videoItem.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\storage\ico_videoItem_active.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Resources\tiku3\tiku.xml" />
+    <Resource Include="Resources\tiku3\tiku得分页在游戏中.xml" />
+    <Content Include="Resources\tlogo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.109.2\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.109.2\build\net451\System.Data.SQLite.Core.targets')" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\packages\CefSharp.Common.63.0.3\build\CefSharp.Common.targets" Condition="Exists('..\packages\CefSharp.Common.63.0.3\build\CefSharp.Common.targets')" />
+  <Import Project="..\packages\CefSharp.WinForms.63.0.3\build\CefSharp.WinForms.targets" Condition="Exists('..\packages\CefSharp.WinForms.63.0.3\build\CefSharp.WinForms.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

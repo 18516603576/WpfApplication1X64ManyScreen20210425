@@ -1,0 +1,19 @@
+﻿<Page x:Class="ShowBox.PageTemplate"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  
+      mc:Ignorable="d"  
+      d:DesignHeight="300" d:DesignWidth="300"
+	Title="PageTemplate" Background="White" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" RenderTransformOrigin="0.5,0.5"  Stylus.IsFlicksEnabled="False">    
+    
+    <Page.Resources>
+        <!--默认ScrollBar--> 
+         <Style TargetType="ScrollBar" BasedOn="{StaticResource ScrollBarStyle1}"/>  
+    </Page.Resources>
+
+    <Grid x:Name="pageCanvas"> 
+        <Grid Name="container" Grid.Row="0" Background="Transparent" Panel.ZIndex="2"  />
+        <Grid Name="backgroundVideo"  Grid.Row="0"  Panel.ZIndex="1" ></Grid>
+    </Grid> 
+</Page>

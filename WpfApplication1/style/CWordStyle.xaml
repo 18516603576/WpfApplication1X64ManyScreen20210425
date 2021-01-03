@@ -1,0 +1,60 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:myLib="clr-namespace:MyLoadingLib;assembly=MyLoadingLib"
+                   xmlns:common="clr-namespace:Common.control;assembly=Common"
+                    xmlns:multiThread="clr-namespace:Common.MultiThread;assembly=Common"
+                    
+                    >
+
+    <Style x:Key="DefaultCWordStyle" TargetType="{x:Type common:CWord}">  
+        <Setter Property="Template"> 
+            <Setter.Value>
+                <ControlTemplate   TargetType="{x:Type common:CWord}">
+                    <Grid x:Name="grid">
+                        <Border x:Name="Bd" Panel.ZIndex="2"></Border>
+                        <ContentPresenter  Panel.ZIndex="1" Canvas.Left="0" Canvas.Top="0" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger  Property="IsEnabled" Value="True">
+
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"  Value="True">
+                            <Setter Property="BorderThickness" TargetName="Bd"   Value="1"/>
+                            <Setter Property="BorderBrush" TargetName="Bd"   Value="#FF109CEC"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+   <!-- CWord下多线程容器 --><!--
+    <Style x:Key="DispatcherContainerStyle" TargetType="{x:Type multiThread:DispatcherContainer}">
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="Template"> 
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                    <Grid x:Name="Container">
+                        <Border x:Name="Loading" Panel.ZIndex="2" Background="White">
+                            <myLib:CirclePointRingLoading    IsActive="True" IsLarge="False" Foreground="#3ca9fe" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <Border x:Name="Bd" Width="Auto" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True" Panel.ZIndex="1">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                    </Grid>
+
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="TextElement.Foreground" TargetName="Bd" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>-->
+
+    <!--默认Button-->
+    <!--<Style TargetType="common:CWord" BasedOn="{StaticResource DefaultCWordStyle}"/>-->
+</ResourceDictionary>

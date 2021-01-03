@@ -1,0 +1,16 @@
+﻿<Window x:Class="ShowBox.RegTipWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShowBox"
+        mc:Ignorable="d"
+        Title="软件注册提醒" Height="500" Width="800" Closed="Window_Closed">
+    <Grid>
+        <Label x:Name="tipContent" Content="---" HorizontalAlignment="Left" Margin="248,110,0,0" VerticalAlignment="Top" Height="49" Width="257" FontSize="16" Foreground="#FFF08010"/>
+        <Label Content="注册软件请联系软件开发商&#xD;&#xA;&#xD;&#xA;北风软件&#xD;&#xA;&#xD;&#xA;18516603576&#xD;&#xA;" HorizontalAlignment="Left" Margin="164,213,0,0" VerticalAlignment="Top" Width="316" Height="90" Foreground="#FF666565"/>
+        <Grid HorizontalAlignment="Left" Height="116" Margin="164,213,0,0" VerticalAlignment="Top" Width="394"/>
+        <Button Content="确定" HorizontalAlignment="Left" Margin="320,400,0,0" VerticalAlignment="Top" Width="81" Height="30" Click="Ok_Button_Click"/>
+
+    </Grid>
+</Window>

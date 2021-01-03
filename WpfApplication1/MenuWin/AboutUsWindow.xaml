@@ -1,0 +1,47 @@
+﻿<Window x:Class="WpfApplication1.MenuWin.AboutUsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1.MenuWin"
+        mc:Ignorable="d"
+        Title="关于触屏精灵" Height="500" Width="800">
+    <Grid>
+        <ScrollViewer x:Name="content" Padding="20">
+            <RichTextBox BorderThickness="0">
+                <FlowDocument>
+                    <Paragraph Padding="20" TextAlignment="Center">
+                        <Bold>
+                            <Run Text="触屏精灵" FontSize="18"/>
+                        </Bold>
+                    </Paragraph>
+                    <Paragraph>
+                        <Run Text="触屏精灵，主要应用于触屏交互，如法院检察院信息查询、博物馆导游、医院导诊、各种展馆、大屏广告、旅游景点介绍等。"/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Run Text="软件由两个部分构成："/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Run Text="1、触屏精灵设计版可以用来自助编辑内容（图片、视频、文章、按钮）。"/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Run Text="2、触屏精灵用来向用户展示内容的主体软件。"/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Run Text="版本： V1.4"/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Run Text="©"/>
+                        <Run Text="2020 北风软件"/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Run Text="北风软件保留软件所有权"/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Run Text="技术支持：18516603576（微信）"/>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+        </ScrollViewer>
+    </Grid>
+</Window>

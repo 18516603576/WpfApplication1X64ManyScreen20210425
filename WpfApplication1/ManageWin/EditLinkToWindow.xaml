@@ -1,0 +1,24 @@
+﻿<Window x:Class="WpfApplication1.ManageWin.EditLinkToWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="链接到" Height="600" Width="900">
+    <Grid x:Name="mainGrid">
+        <!--<Label Content="请选择页面：" HorizontalAlignment="Left" Margin="106,83,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.226,3.044" Height="29" Width="109"/>
+        <Label Content="*" Foreground="red" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="83,85,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.226,3.044" Height="24" Width="23"/>
+        <ComboBox Name="linkToPageId" Text="请选择" HorizontalAlignment="Left" Margin="106,117,0,0" VerticalAlignment="Top" Height="30"  VerticalContentAlignment="Center" MinWidth="200"/>
+        <Button Name="Submit_Button" Content="保存" HorizontalAlignment="Left" Margin="595,397,0,0" VerticalAlignment="Top" Width="114" Height="38" Click="Submit_Button_Click"/>
+
+        <Label Content="显示位置：" ToolTip="显示到哪个窗口"  HorizontalAlignment="Left" Margin="106,195,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.226,3.044" Height="29" Width="109">
+
+        </Label>
+        <ComboBox Name="showInWhichCFrame" Text="请选择" HorizontalAlignment="Left" Margin="106,229,0,0" VerticalAlignment="Top" Height="30"  VerticalContentAlignment="Center" MinWidth="200"/>
+
+
+        <Label Content="显示到哪个屏幕：" ToolTip="显示到哪个窗口"  HorizontalAlignment="Left" Margin="106,318,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.226,3.044" Height="29" Width="109">
+
+        </Label>
+        <ComboBox Name="screenCfgId" Text="请选择" HorizontalAlignment="Left" Margin="106,352,0,0" VerticalAlignment="Top" Height="30"  VerticalContentAlignment="Center" MinWidth="200"/>-->
+
+        <Button Name="Submit_Button" Content="保存" HorizontalAlignment="Left" Margin="742,513,0,0" VerticalAlignment="Top" Width="114" Height="38" />
+    </Grid>
+</Window>

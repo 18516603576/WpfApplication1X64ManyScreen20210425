@@ -1,0 +1,12 @@
+﻿<Window x:Class="WpfApplication1.PageWin.RenameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="重命名" Height="300" Width="500">
+    <Grid>
+        <Label Content="新名称" HorizontalAlignment="Left" Margin="110,86,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.588,-1.164"/>
+        <TextBox Name="pagename" HorizontalAlignment="Left" Height="30" VerticalContentAlignment="Center" Margin="110,116,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="201"/>
+        <Button Content="保存" HorizontalAlignment="Left" Margin="353,216,0,0" VerticalAlignment="Top" Width="96" Click="Button_Click" Height="26"/>
+
+
+    </Grid>
+</Window>

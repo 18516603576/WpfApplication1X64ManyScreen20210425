@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+<xuanzetiku apiurl1="http://localhost/lianzheng/" apiurl="http://127.0.0.1/game/lianzheng/">
+	<timu>
+		<pic yes="1">pic3/1-2.png</pic>
+		<pic yes="0">pic3/1-1.png</pic>
+		<pic yes="0">pic3/1-3.png</pic>
+		<pic yes="0">pic3/1-4.png</pic>
+		<wenzi yes="0"><![CDATA[诸葛亮]]></wenzi>
+		<wenzi yes="1"><![CDATA[包拯]]></wenzi>
+		<wenzi yes="0"><![CDATA[司马迁]]></wenzi>
+		<wenzi yes="0"><![CDATA[司马懿]]></wenzi>
+	</timu>
+	<timu>
+		<pic yes="1">pic3/2-2.png</pic>
+		<pic yes="0">pic3/2-1.png</pic>
+		<pic yes="0">pic3/2-3.png</pic>
+		<pic yes="0">pic3/2-4.png</pic>
+		<wenzi yes="0"><![CDATA[诸葛亮]]></wenzi>
+		<wenzi yes="1"><![CDATA[包拯]]></wenzi>
+		<wenzi yes="0"><![CDATA[司马迁]]></wenzi>
+		<wenzi yes="0"><![CDATA[司马懿]]></wenzi>
+	</timu>
+</xuanzetiku>
+</root>
+
+
+

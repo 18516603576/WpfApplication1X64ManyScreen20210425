@@ -1,0 +1,13 @@
+﻿<Window x:Class="WpfApplication1.DeleteMoreScreenWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="删除屏幕" Height="300" Width="500">
+
+    <Grid>
+        <Label Content="确定删除当前屏幕吗？"  Margin="170,65,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Label x:Name="diyName" Content="" Foreground="#f00"  Margin="86,104,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"   HorizontalContentAlignment="Center" Width="291" />
+
+        <Button Content="确定" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" x:Name="Submit_Button" Height="26"   Canvas.Left="303" Canvas.Top="10" Margin="170,186,0,0"/>
+
+    </Grid>
+</Window>

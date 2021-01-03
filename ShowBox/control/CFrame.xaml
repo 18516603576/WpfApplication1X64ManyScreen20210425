@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="ShowBox.control.CFrame"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ShowBox.control"
+             mc:Ignorable="d" 
+              d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Border x:Name="CoverBorder" Panel.ZIndex="2" Background="Blue" Visibility="Collapsed"></Border>
+        <ScrollViewer x:Name="scrollViewer" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Panel.ZIndex="1" PanningMode="VerticalFirst" ManipulationBoundaryFeedback="ScrollViewerManipulationBoundaryFeedback" Focusable="False"  PanningDeceleration="0.00096">
+            <Frame Name="mainFrame" Content="ChildFrame" ScrollViewer.PanningMode="VerticalFirst"  Panel.ZIndex="1" Width="1920" Height="1080"  BorderThickness="0" Background="Transparent" NavigationUIVisibility="Hidden"   HorizontalAlignment="Center" VerticalAlignment="Center"   RenderTransformOrigin="0.5,0.5"  Focusable="False">
+
+            </Frame>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

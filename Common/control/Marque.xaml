@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="Common.control.Marque"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+             mc:Ignorable="d" 
+             Name="userControl1"
+             d:DesignHeight="400" d:DesignWidth="600" Background="Transparent"  >
+
+    <Grid Grid.Row="1" Name="mainContainer">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="12"/>
+        </Grid.RowDefinitions>
+
+        <ScrollViewer x:Name="marque_scrollViewer"  Width="400"  HorizontalContentAlignment="Stretch" Grid.RowSpan="2"  Background="Transparent"  BorderThickness="0"     BorderBrush="{x:Null}"   ScrollViewer.HorizontalScrollBarVisibility="Hidden"  ScrollViewer.VerticalScrollBarVisibility="Disabled"  Panel.ZIndex="2" PanningMode="HorizontalOnly"  PanningRatio="0.4"  PanningDeceleration="0.00096" IsDeferredScrollingEnabled="True" >
+            <StackPanel x:Name="marque_stackPanel" Orientation="Horizontal"  >
+                
+            </StackPanel> 
+        </ScrollViewer>
+
+      
+
+        <StackPanel Name="pagePanel" Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" Margin="0" Panel.ZIndex="4" >
+
+           
+        </StackPanel> 
+
+
+    </Grid>
+
+</UserControl>
